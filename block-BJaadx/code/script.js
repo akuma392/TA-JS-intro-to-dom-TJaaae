@@ -46,21 +46,44 @@ let allTopics = document.querySelectorAll("ul");
 
 // 11. Select all the input element of any type and store in `allInput`
 
+let allInput = document.querySelectorAll("input");
+
 // 12. Use forEach to console the `innerText` property of all the li element in `allTopics` variable.
+
+console.log(allTopics.forEach((num) => num.innerText));
 
 // 13. Select all the elements with class `list` and store in variable `listOfSelectedTopics`
 
+let listOfSelectedTopics = document.querySelectorAll(".list");
+
 // 14. Select the first li element inside the `ul` element using `>` (direct child) and store in `firstLi`
+
+let firstLi = listOfSelectedTopics[0];
 
 // 15. Select all the img element and log the number of element saying `The total number of img element is ---`
 
+let noOfImg = document.querySelectorAll("img").length;
+
+console.log(`the total no of images are ${noOfImg}`);
 // 16. Select all the `p` element and store in `allPElement`
+
+let allPElement = document.querySelectorAll("p");
 
 // 17. Select all the buttons and log the count of buttons.
 
+let allButton = document.querySelectorAll("button");
+
+console.log(`the total no of button are ${allButton.length}`);
+
 // 18. Select all the `label` element and log the count.
 
+let allLabel = document.querySelectorAll("label").length;
+
+console.log(`total no of label: ${allLabel}`);
+
 // 19. Select all the elements with `id` of `test`
+
+document.querySelectorAll("#test");
 
 // 20. Select the first element with id `test` using `getElementById`
 
