@@ -87,16 +87,42 @@ document.querySelectorAll("#test");
 
 // 20. Select the first element with id `test` using `getElementById`
 
+document.getElementById("test");
+
 // 21. Select the parent element of the element stored in `topics` variable (#5) and log the element.
+
+var ulParentElement = topics[0].parentElement;
+
+console.log(topics[0].parentElement);
 
 // 22. Select the next element sibling of the element stored in `topics` variable (#5) and log the element.
 
+let ulNextSibiling = topics[0].nextElementSibling;
+
+console.log(ulNextSibiling);
+
 // 23. Select the previous element sibling of the element stored in `topics` variable (#5) and change the `innerText` property to `Learning About Walking the DOM`.
+
+let uLPreviousSibling = topics[0].previousElementSibling;
+
+uLPreviousSibling.innerText = "Learning About walking DOM";
 
 // 24. Select the first element child of the element stored in `topics` variable (#5) and change the `innerText` property of the element to `This is the first child element`.
 
+let firstChildUl = topics[0].firstElementChild;
+
+firstChildUl.innerText = "This is the first child Element";
+
 // 25. Select the last element child of the element stored in `topics` variable (#5) and log the `typeof` the element.
+
+let lastChildUl = topics[0].lastElementChild;
+
+console.log(typeof lastChildUl);
 
 // 26. Select the element with type `fieldset` and store in a variable named `fieldsetElm`.
 
+let fieldsetElm = document.querySelector("fieldset");
+
 // 27. Select the parent element of the element stored in `fieldsetElm` variable (#5) and log the `typeof` the element.
+
+console.log(typeof fieldsetElm.parentElement);
