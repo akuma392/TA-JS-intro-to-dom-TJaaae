@@ -26,6 +26,17 @@ createInputElm("Your age", "number"); //<label>Your age: <input type="number"></
 
 // Your code goes here
 
+function createInputElm(lab, type = "text") {
+  let label = document.createElement("label");
+  label.innerText = lab;
+
+  let input = document.createElement("input");
+
+  input.setAttribute("type", type);
+
+  return label.append(input);
+}
+
 // TEST
 createInputElm("Your name"); //<label>Your name: <input type="text"></label>
 createInputElm("Your age", "number"); //<label>Your age: <input type="number"></label>
@@ -35,6 +46,13 @@ createInputElm("Your age", "number"); //<label>Your age: <input type="number"></
 // Your code goes here
 
 // TEST
+
+function createList(arr) {
+  let ul = document.createElement("ul");
+
+  ul.innerHTML = arr.map((arr) => "<li>" + arr + "<li>");
+  return ul;
+}
 createList(["ALABAMA", "ALASKA", "HAWAII", "KENTUCKY"]);
 createList(["Afghanistan", "Antarctica", "Congo", "Estonia"]);
 
