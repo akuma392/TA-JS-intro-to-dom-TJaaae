@@ -13,10 +13,10 @@ function createInputElm(lab, type = "text") {
 
   let input = document.createElement("input");
 
-  input.type = type
+  input.type = type;
 
   label.append(input);
-  return label
+  return label;
 }
 
 // TEST
@@ -28,7 +28,7 @@ createInputElm("Your age", "number"); //<label>Your age: <input type="number"></
 // Your code goes here
 
 function createInputElm(lab, type = "text") {
-  let html = `<lable>${lab} <input type="${type}"></label>`
+  let html = `<lable>${lab} <input type="${type}"></label>`;
   return html;
 }
 
@@ -42,11 +42,16 @@ createInputElm("Your age", "number"); //<label>Your age: <input type="number"></
 
 // TEST
 
-function createList(arr) {
-  let ul = document.createElement("ul");
- 
-  ul.innerHTML = arr.map((arr) => "<li>" + arr + "<li>");
-  return ul;
+function createList(arr = []) {
+  // let ul = document.createElement("ul");
+
+  // ul.innerHTML = arr.map((arr) => "<li>" + arr + "<li>").join("");
+  // return ul;
+
+  let html = `<ul>
+  ${arr.map((elm) => `<li>${elm}<li>`).join("")}
+  <ul>`;
+  return html;
 }
 createList(["ALABAMA", "ALASKA", "HAWAII", "KENTUCKY"]);
 createList(["Afghanistan", "Antarctica", "Congo", "Estonia"]);
@@ -64,6 +69,21 @@ createList(["Afghanistan", "Antarctica", "Congo", "Estonia"]);
 */
 
 // Your code goes here
+
+function createTodoList(arr = []) {
+  let html = `<ul>
+  ${arr
+    .map(
+      (elm) => `<li>
+  <p>${elm.name}</p>
+  <input type="checkbox" ${elm.isDone ? "checked" : ""} name="" id="">
+  <span>X</span>
+</li>`
+    )
+    .join("")}
+  <ul>`;
+  return html;
+}
 
 // TEST
 createTodoList([
