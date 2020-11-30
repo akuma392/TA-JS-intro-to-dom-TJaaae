@@ -40,6 +40,8 @@ let password = document.querySelector("#password");
 
 // 9. Select the input using the placeholder attribute selector with value `password` and store in `attrPassword`
 
+let attrPassword = document.querySelector('input[placeholders="password"]);
+
 // 10. Select all the `li` element and store in `allTopics`
 
 let allTopics = document.querySelectorAll("ul");
