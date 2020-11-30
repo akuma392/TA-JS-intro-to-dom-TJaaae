@@ -50,8 +50,11 @@ heading.style.textAlign = "center";
 heading.style.fontSize = "3rem";
 
 // Change the border of hr with class 'image' to `2px solid purple`.
+document.querySelectorAll('hr.image').forEach(elm => elm.style.border = "2px solid purple");
 
 // Hide the box number 17 (last box).
+
+document.querySelector('.seventeen').style.display = "none";
 
 // Change the border of all the hr element from solid to dashed type
 
