@@ -13,9 +13,10 @@ function createInputElm(lab, type = "text") {
 
   let input = document.createElement("input");
 
-  input.setAttribute("type", type);
+  input.type = type
 
-  return label.append(input);
+  label.append(input);
+  return label
 }
 
 // TEST
@@ -27,14 +28,8 @@ createInputElm("Your age", "number"); //<label>Your age: <input type="number"></
 // Your code goes here
 
 function createInputElm(lab, type = "text") {
-  let label = document.createElement("label");
-  label.innerText = lab;
-
-  let input = document.createElement("input");
-
-  input.setAttribute("type", type);
-
-  return label.append(input);
+  let html = `<lable>${lab} <input type="${type}"></label>`
+  return html;
 }
 
 // TEST
@@ -49,7 +44,7 @@ createInputElm("Your age", "number"); //<label>Your age: <input type="number"></
 
 function createList(arr) {
   let ul = document.createElement("ul");
-
+ 
   ul.innerHTML = arr.map((arr) => "<li>" + arr + "<li>");
   return ul;
 }
